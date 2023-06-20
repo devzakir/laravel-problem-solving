@@ -1,0 +1,46 @@
+.pagination {
+  padding-top: 10px;
+  padding-bottom: 100px;
+  .inner {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    a {
+      cursor: pointer;
+      &.num {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background-color: $white-color;
+        color: $text-color;
+        font-size: 20px;
+        font-family: din-regular, sans-serif;
+        text-align: center;
+        border: 1px solid $text-color;
+        line-height: 32px;
+        margin-right: 10px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        &.current {
+          background-color: $pink-color;
+          border: 0;
+          color: $white-color;
+        }
+      }
+      &.prev {
+        margin-right: 20px;
+        &.disabled {
+          opacity: 0.4;
+        }
+      }
+      &.next {
+        margin-left: 10px;
+        &.disabled {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+}

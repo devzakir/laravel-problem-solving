@@ -1,0 +1,32 @@
+@mixin sp {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@import 'variables';
+@import '~sweetalert2/src/sweetalert2';
+
+@import 'elements/card';
+@import 'elements/navbar';
+@import 'elements/footer';
+@import 'elements/buttons';
+@import 'elements/transitions';
+@import 'elements/breadcrumb';
+@import 'elements/pagination';
+
+// buyer
+@import 'buyer/auth';
+@import 'buyer/top';
+@import 'buyer/mypage';
+@import 'buyer/_detail';
+
+//creator
+@import 'creator/auth';
+@import 'creator/sidebar';
+@import 'creator/dashboard';
+
+.v-autocomplete-list {
+    background-color: white !important;
+    z-index: 900;
+}

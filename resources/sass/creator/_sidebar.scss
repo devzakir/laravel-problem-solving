@@ -1,0 +1,194 @@
+.admin__sidebar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 360px;
+	background-color: $back-color4;
+	height: 100vh;
+	box-shadow: 1px 0px 6px -1px #444;
+	z-index: 980;
+
+	.logo {
+		background-color: $white-color;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		h1 {
+			width: 200px;
+		}
+	}
+
+	@include sp {
+		display: none;
+	}
+}
+
+.admin__navbar {
+	height: 50px;
+	position: fixed;
+	left: 360px;
+	top: 0;
+	width: calc(100% - 360px);
+	z-index: 900;
+
+	@include sp {
+		left: 0;
+		width: 100%;
+	}
+
+	a {
+		&:first-of-type {
+			@include sp {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.sidebar__menu_list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 20px;
+
+	a {
+		display: flex;
+		align-items: center;
+		color: $white-color !important;
+		width: 340px;
+		height: 60px;
+		font-size: 16px;
+		font-family: $hiragino;
+		position: relative;
+		padding-left: 50px;
+		margin-bottom: 10px;
+
+		&:hover {
+			background-color: $hover-color;
+			border-radius: 8px;
+		}
+		
+		&.dashboard {
+			&.router-link-active {
+				border-radius: 8px;
+				background-color: $blue-color;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				left: 20px;
+				top: 50%;
+				transform: translate(0, -50%);
+				background-image: url(/asset/admin/icon_dashboard.png);
+				width: 13px;
+				height: 18px;
+				background-size: cover;
+			}
+		}
+
+		&.movies {
+			&:before {
+				content: '';
+				position: absolute;
+				left: 20px;
+				top: 50%;
+				transform: translate(0, -50%);
+				background-image: url(/asset/admin/icon_movie_list.png);
+				width: 22px;
+				height: 25px;
+				background-size: cover;
+			}
+
+			&.router-link-active {
+				border-radius: 8px;
+				background-color: $white-color;
+				color: $text-color !important;
+
+				&:before {
+					background-image: url(/asset/admin/icon_movie_list_off.png);
+				}
+				
+			}
+		}
+
+		&.history {
+			&:before {
+				content: '';
+				position: absolute;
+				left: 20px;
+				top: 50%;
+				transform: translate(0, -50%);
+				background-image: url(/asset/admin/icon_payment.png	);
+				width: 28px;
+				height: 25px;
+				background-size: cover;
+			}
+
+			&.router-link-active {
+				border-radius: 8px;
+				background-color: $white-color;
+				color: $text-color !important;
+
+				&:before {
+					background-image: url(/asset/admin/icon_payment_off.png);
+				}
+				
+			}
+		}
+
+		&.account {
+			&:before {
+				content: '';
+				position: absolute;
+				left: 20px;
+				top: 50%;
+				transform: translate(0, -50%);
+				background-image: url(/asset/admin/icon_profile.png	);
+				width: 23px;
+				height: 23px;
+				background-size: cover;
+			}
+
+			&.router-link-active {
+				border-radius: 8px;
+				background-color: $white-color;
+				color: $text-color !important;
+
+				&:before {
+					background-image: url(/asset/admin/icon_profile_off.png);
+				}
+				
+			}
+		}
+
+		&.movie_post {
+			&:before {
+				content: '';
+				position: absolute;
+				left: 20px;
+				top: 50%;
+				transform: translate(0, -50%);
+				background-image: url(/asset/admin/icon_movie.png);
+				width: 25px;
+				height: 17px;
+				background-size: cover;
+			}
+
+			&.router-link-active {
+				border-radius: 8px;
+				background-color: $white-color;
+				color: $text-color !important;
+
+				&:before {
+					background-image: url(/asset/admin/icon_movie_off.png);
+				}
+				
+			}
+		}
+
+	}
+}

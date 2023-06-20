@@ -1,0 +1,345 @@
+:root {
+  --accent-color: #84c202;
+  --accent-color2: #014E81;
+  --main-color: #F3F3F3;
+  --main-color2: #2A3039;
+  --text-color: #4B4B4B;
+  --border-color: #707070;
+}
+// // Body
+$body-bg: #f7f9fb;
+
+// Cards
+$card-spacer-x: 0.9375rem;
+$card-spacer-y: 0.625rem;
+$card-cap-bg: #fbfbfb;
+$card-border-color: #e8eced;
+
+// Borders
+$border-radius: .125rem;
+$border-radius-lg: .2rem;
+$border-radius-sm: .15rem;
+
+// Nav Pills
+$nav-pills-border-radius: 0;
+
+$back-color: #eeeeee;
+$back-color2: #f2f2f2;
+$back-color3: #f7f8fa;
+$white-color: #fff;
+$text-hover-color: #808081;
+$text-color: #333333;
+$text-color1: #8e9093;
+$main-color: #39b14a;
+$green-color: #009044;
+$border-color: #6d6e71;
+$disable-color: #58595b;
+$pink-color: #ed5284;
+$pink1-color: #ff5cad;
+$gold_color: #a48265;
+$invalid-color: red;
+
+// 管理画面
+$back-color4: #343a40;
+$blue-color: #007bff;
+$hover-color: #4e4e4e;
+
+
+// 初期化
+html body {
+  font-family: 'Noto Sans JP', sans-serif !important;
+  font-weight: 400;
+  background-color: white !important;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin :0;
+}
+
+body {
+  color: $text-color;
+  background-color: $white-color !important;
+}
+
+body p {
+  margin-bottom: 0;
+}
+
+body .md-checkbox {
+  margin: 0;
+}
+
+.top__container, .mypage__container {
+  min-height: 71vh;
+}
+
+body {
+  button, a {
+    cursor: pointer;
+  }
+}
+
+body {
+  a:hover {
+    text-decoration: none !important;
+  }
+}
+
+.dis-none {
+  display: none !important;
+}
+
+body label {
+  margin-bottom: 0;
+}
+
+$spacer: 10px;
+
+body a {
+  cursor: pointer;
+}
+
+.main_container {
+  width: 1360px;
+  margin: 0 auto;
+
+  @include sp {
+    width: 90vw;
+  }
+}
+
+// font family
+$hiragino: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック" , "MS Gothic", "Noto Sans CJK JP", TakaoPGothic, sans-serif;
+$hiragino_maru: "ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+
+@font-face {
+  font-family: 'din-regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Dinner Regular'), local('Dinner regular'),
+       url('/fonts/d-din.regular.ttf') format('truetype'),
+       url('/fonts/d-din.regular.otf') format('opentype'),
+}
+// common title
+
+.common__heading {
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  border-left: 2px solid $pink-color;
+  font-size: 20px;
+  font-family: $hiragino;
+
+  @include sp {
+    line-height: 1.6;
+    padding-left: 2vw;
+    font-size: 4.5vw;
+  }
+
+  &.green {
+    border-left: 2px solid $green-color;
+  }
+}
+
+.dashboard__container {
+  padding-left: 360px;
+  padding-top: 15px;
+
+  @include sp {
+    overflow: auto;
+  }
+}
+
+.video-js {
+  width: 100%;
+  height: auto;
+  padding-top: 56.25% !important;
+}
+
+input.is-invalid {
+  border: 1px solid $invalid-color !important;
+  color: $invalid-color;
+}
+
+.invalid-note {
+  font-size: 12px;
+  color: $invalid-color;
+}
+
+.slide_movies {
+  .movie__item {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .VueCarousel-slide {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+  }
+
+  .VueCarousel-dot {
+    background-color: #c7ced8 !important;
+    outline: none !important;
+
+    &.VueCarousel-dot--active {
+      background-color: #ed5284 !important;
+    }
+  }
+
+  .VueCarousel-dot-container {
+    margin-top: 0 !important;
+  }
+
+  .VueCarousel-navigation-button {
+    font-size: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 70px !important;
+    background: rgba($color: #333, $alpha: 0.7) !important;
+    color: white !important;
+    border-radius: 4px !important;
+
+    @include sp {
+      font-size: 4vw !important;
+      height: 6vw;
+    }
+  }
+
+  @include sp {
+    .VueCarousel-navigation-next {
+      right: 7vw !important;
+    }
+  
+    .VueCarousel-navigation-prev {
+      left: 7vw !important;
+    }
+  }
+
+  .VueCarousel-inner {
+    padding-top: 40px;
+    @include sp {
+      padding-top: 6vw;
+    }
+  }
+}
+
+.page__title {
+  padding-left: 6px;
+  border-left: 10px solid var(--accent-color);
+  font-size: 18px;
+  color: var(--text-color);
+  line-height: 30px;
+
+  &.black {
+    border-left: 10px solid #48515D;
+  }
+}
+
+.page__title1 {
+  padding-left: 6px;
+  border-left: 10px solid var(--accent-color2);
+  font-size: 18px;
+  color: var(--text-color);
+  line-height: 30px;
+
+  &.black {
+    border-left: 10px solid #48515D;
+  }
+}
+
+.page__title3 {
+  padding-left: 6px;
+  border-left: 10px solid var(--border-color);
+  font-size: 18px;
+  color: var(--text-color);
+  line-height: 30px;
+
+  &.black {
+    border-left: 10px solid #48515D;
+  }
+}
+
+.vgt-table thead th {
+  background: var(--main-color2) !important;
+  color: #fff !important;
+  font-size: 12px !important;
+}
+
+.vgt-table {
+  border-radius: 5px !important;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+}
+
+.my_custom_pagination {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+
+  li {
+    margin-right: 4px;
+
+    a {
+      width: 20px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      padding-top: 6px;
+      background-color: var(--main-color2);
+      color: #fff !important;
+      font-size: 12px;
+    }
+
+    &.active {
+      a {
+        background-color: #AFB6BF;
+      }
+    }
+  }
+}
+
+.vgt-wrap__actions-footer {
+  border: 0 !important;
+  padding-top: 20px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+table.vgt-table td {
+  font-size: 12px !important;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+#vgt-table td input {
+  height: 30px;
+  border: 1px solid var(--border-color);
+  padding-left: 5px;
+  padding-right: 5px;
+
+  &[disabled] {
+    background-color: #ccc;
+  }
+}
+
+.autocomplete-input {
+  height: 30px;
+  border: 1px solid #ccc !important;
+}
+
+.main__container, .create__container {
+  flex: 1;
+  overflow: auto;
+}

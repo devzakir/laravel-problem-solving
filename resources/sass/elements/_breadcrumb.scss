@@ -1,0 +1,19 @@
+.bread_crumb {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 700;
+
+  @include sp {
+    display: none;
+  }
+
+  a, span {
+    font-size: 12px;
+    margin-right: 10px;
+    font-family: $hiragino_maru;
+  }
+
+  a {
+    color: $main-color;
+  }
+}

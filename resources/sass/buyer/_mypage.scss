@@ -1,0 +1,651 @@
+.mypage__tab {
+  border-bottom: 1px solid $main-color;
+
+  @include sp {
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+  }
+
+  .main_container {
+    display: flex;
+    justify-content: flex-end;
+
+    @include sp {
+      display: block;
+    }
+
+    a {
+      padding-left: 60px;
+      padding-right: 60px;
+      color: #8e9093 !important;
+      font-size: 18px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      bottom: -1px;
+
+      &:hover {
+        color: #8e9093 !important; 
+        font-weight: bold;
+        text-decoration: none !important;
+      }
+
+      &.router-link-active {
+        border-left: 2px solid $main-color;
+        border-top: 5px solid $main-color;
+        border-right: 2px solid $main-color;
+        color: $text-color;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: $white-color !important;
+
+        @include sp {
+          border-bottom: 2px solid $main-color;
+        }
+      }
+    }
+  }
+}
+
+.movies__container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include sp {
+    padding-top: 8vw;
+    padding-bottom: 8vw;
+  }
+}
+
+.movies_list {
+  padding-top: 45px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.creator_list {
+  padding-top: 45px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include sp {
+    padding-top: 6vw;
+  }
+}
+
+.news__list {
+  padding-top: 45px;
+  width: 780px;
+  margin: 0 auto;
+
+  @include sp {
+    padding-top: 6vw;
+    width: 100%;
+  }
+}
+
+.creator__item {
+  display: flex;
+  width: calc((100% - 80px) /3);
+  margin-right: 40px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 6px -1px #555;
+  cursor: pointer;
+  margin-bottom: 38px;
+
+  @include sp {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 6vw;
+    border-radius: 1vw;
+  }
+
+  &:nth-of-type(3n) {
+    margin-right: 0;
+  }
+
+  .avatar {
+    width: 150px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    overflow: hidden;
+
+    @include sp {
+      width: 20vw;
+    }
+
+    .img {
+      width: 100%;
+      position: relative;
+      padding-top: 100%;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .creator__info {
+    flex: 1;
+    padding: 12px 12px 18px 18px;
+    position: relative;
+
+    @include sp {
+      padding: 2vw 2vw 3vw 3vw;
+    }
+
+    .nickname {
+      position: relative;
+      height: 25px;
+      background-color: $pink-color;
+      color: $white-color;
+      font-size: 14px;
+      padding-left: 7px;
+      padding-right: 22px;
+      position: relative;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: -20px;
+      font-family: $hiragino_maru;
+
+      @include sp {
+        height: 3vw;
+        font-size: 3vw;
+        padding-left: 1vw;
+        padding-right: 3vw;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        border-top: 12.5px solid transparent;
+        border-bottom: 12.5px solid transparent;
+        border-right: 4px solid $white-color;
+        right: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+      }
+    }
+
+    .count {
+      padding-top: 23px;
+
+      .count__row {
+        display: flex;
+        font-weight: bold;
+        margin-bottom: 4px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        p {
+          &:first-of-type {
+            text-align: left;
+            width: 120px;
+            font-size: 14px;
+            color: $text-color;
+            font-family: $hiragino_maru;
+          }
+
+          &:last-of-type {
+            text-align: left;
+            flex: 1;
+            color: $pink-color;
+            font-family: $hiragino_maru;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+
+    .donate__btn {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      width: fit-content;
+      padding: 0 13px;
+      font-size: 16px;
+      color: $white-color !important;
+      background-color: #bf956c;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      font-family: $hiragino_maru;
+
+      &:hover {
+        background-color: #af763f;
+      }
+    }
+  }
+}
+
+.news__item {
+  display: flex;
+  margin-bottom: 40px;
+
+  .news__icon {
+    width: 24px;
+    height: 24px;
+    margin-top: 15px;
+    margin-right: 4px;
+  }
+
+  .news__content {
+    flex: 1;
+    border: 1px solid $text-color;
+    padding: 12px 37px 20px 35px;
+    font-size: 16px;
+    border-radius: 6px;
+    position: relative;
+    font-family: $hiragino_maru;
+
+    .news__date {
+      position: absolute;
+      padding-left: 30px;
+      padding-right: 30px;
+      height: 30px;
+      border: 15px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $pink1-color;
+      color: $pink1-color;
+      font-family: $hiragino_maru;
+      right: -30px;
+      bottom: -15px;
+      background-color: $white-color;
+      border-radius: 15px;
+    }
+  }
+}
+
+.accout__part {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  background-color: $back-color2;
+  padding: 50px 50px 60px 0;
+  border-radius: 8px;
+
+  @include sp {
+    display: block;
+    padding: 5vw;
+    border-radius: 2vw;
+  }
+  
+  .avatar {
+    width: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    @include sp {
+      width: 100%;
+    }
+
+    .img {
+      width: 80px;
+      height: 80px;
+      position: relative;
+      border-radius: 50%;
+      overflow: hidden;
+      cursor: pointer;
+
+      @include sp {
+        width: 26vw;
+        height: 26vw;
+      }
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .account__info {
+    flex: 1;
+
+    @include sp {
+      margin-top: 6vw;
+    }
+
+    .account__row {
+      border-bottom: 1px solid $text-color;
+      padding: 30px 0 30px;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      @include sp {
+        padding: 5vw 0 5vw;
+        flex-wrap: wrap;
+      }
+
+      label {
+        color: $text-color1;
+        font-size: 14px;
+        width: 135px;
+
+        @include sp {
+          font-size: 3vw;
+          width: 100%;
+          margin-bottom: 2vw;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        color: $text-color;
+        flex: 1;
+
+        @include sp {
+          flex: none;
+          width: 100%;
+          font-size: 3vw;
+        }
+
+        input {
+          border: 1px solid $border-color;
+          padding-left: 10px;
+          border-radius: 4px;
+          height: 36px;
+          width: 300px;
+
+          @include sp {
+            padding-left: 2vw;
+            border-radius: 0.5vw;
+            height: 8vw;
+            width: 100%;
+          }
+
+          &.invalid {
+            border: 1px solid red;
+            color: red;
+          }
+        }
+      }
+    }
+
+    .edit__btn, .cancel__btn {
+      position: absolute;
+      right: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(247,247,247,1) 46%, rgba(225,225,225,1) 100%);
+      letter-spacing: 2px;
+      border-radius: 4px;
+      font-family: $hiragino;
+      top: 50%;
+      transform: translate(0, -50%);
+      border: 1px solid #ababab;
+      color: $text-color;
+      text-decoration: none !important;
+
+      @include sp {
+        position: relative;
+        right: 0;
+        top: 0;
+        transform: none;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        height: 8vw;
+        font-size: 3vw;
+        border-radius: 4vw;
+        margin-top: 2vw;
+      }
+
+      &:hover {
+        color: $white-color !important;
+        background: $text-color;
+      }
+    }
+
+    .cancel__btn {
+      background: $text-color;
+      color: $white-color !important;
+      right: 100px;
+
+      @include sp {
+        right: auto;
+        margin-left: 2vw;
+      }
+
+      &:hover {
+        background: $white-color;
+        color: $text-color !important;
+        border: 1px solid $text-color;
+      }
+    }
+
+    .account__row_group {
+      padding: 0 0 30px;
+      border-bottom: 1px solid $text-color;
+      position: relative;
+
+      .account__row {
+        border-bottom: 0;
+        padding: 0;
+
+        &:first-of-type {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+
+.account__bottom_tab_bar {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+
+  @include sp {
+    margin-top: 6vw;
+  }
+
+  a {
+    width: calc((100% - 40px) /2);
+    height: 55px;
+    background-color: #808080;
+    color: $white-color !important;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding-left: 20px;
+    position: relative;
+    font-family: $hiragino_maru;
+
+    @include sp {
+      width: 100%;
+      height: 8vw;
+      font-size: 3vw;
+      justify-content: center;
+      padding-left: 5vw;
+    }
+
+    i {
+      margin-left: auto;
+      margin-right: 20px;
+
+      @include sp {
+        margin-right: 5vw;
+      }
+    }
+  }
+}
+
+.account__detail {
+  padding-bottom: 30px;
+}
+
+.payment__history {
+  padding-top: 45px;
+  padding-left: 95px;
+  padding-right: 95px;
+
+  .inner {
+    width: 100%;
+    border-top: 8px solid #a2a4a7;
+
+    table {
+      font-family: $hiragino_maru;
+      width: 100%;
+      border: 1px solid #a2a4a7;
+      border-collapse: collapse;
+      td, th {
+        border: 1px solid #a2a4a7;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      th {
+        font-size: 14px;
+        color: #58595b;
+
+        &:first-of-type {
+          text-align: center;
+        }
+        &:last-of-type {
+          text-align: center;
+        }
+        &:nth-of-type(2) {
+          padding-left: 20px;
+        }
+        &:nth-of-type(3) {
+          padding-left: 20px;
+        }
+      }
+
+      tr {
+        td {
+          font-size: 14px;
+          &:first-of-type {
+            color: $pink-color;
+            width: 185px;
+            text-align: center;
+          }
+
+          &:nth-of-type(2) {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+
+          &:nth-of-type(3) {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+
+          &:last-of-type {
+            width: 170px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.payment__info {
+  width: 1170px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  box-shadow: 0 0 3px 1px #999;
+  position: relative;
+
+  .note {
+    padding-left: 200px;
+    font-size: 14px;
+    color: #808080;
+    margin-bottom: 44px;
+    margin-top: 16px;
+  }
+
+  .info__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 44px;
+    &.note_pre {
+      margin-bottom: 0;
+    }
+
+    label {
+      width: 200px;
+      font-size: 16px;
+    }
+
+    input {
+      flex: 1;
+      border: 1px solid $text-color;
+      border-radius: 4px;
+      padding-left: 20px;
+      font-size: 16px;
+      height: 56px;
+
+      &.multi {
+        width: 155px;
+        flex: none;
+        margin-right: 30px;
+      }
+    }
+
+    span {
+      height: 56px;
+
+      img {
+        height: 100%;
+        width: auto ;
+      }
+    }
+  }
+
+  .register {
+    position: absolute;
+    right: 36px;
+    bottom: 70px;
+    width: 160px;
+    height: 40px;
+    border-radius: 28px;
+    border: 2px solid $pink-color;
+    color: $pink-color !important;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $hiragino_maru;
+
+    &:hover {
+      background-color: $pink-color;
+      color: $white-color !important;
+      text-decoration: none !important;
+    }
+  }
+}

@@ -1,0 +1,268 @@
+.movie__detail {
+	width: 1170px;
+	margin: 35px auto 0;
+	box-shadow: 0px 0px 8px 0px #555;
+
+	@include sp {
+		width: 100%;
+		margin: 6vw auto 0;
+	}
+}
+
+.video__player_part{
+
+}
+
+.video__player{
+	.video-js {
+		width: 100%;
+	}
+}
+
+.movie__actin_bar {
+	background-color: $white-color !important;
+	display: flex;
+	padding: 0 34px;
+	height: 70px;
+	align-items: center;
+
+	@include sp {
+		padding: 0 5vw;
+		height: auto;
+		flex-direction: column-reverse;
+		padding-top: 3vw;
+		padding-bottom: 3vw;
+	}
+
+	.left__action {
+		width: fit-content;
+		display: flex;
+
+		@include sp {
+			width: 100%;
+			margin-top: 3vw;
+		}
+
+		div {
+			width: 190px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 16px;
+			font-family: $hiragino_maru;
+
+			@include sp {
+				width: calc(100% / 3);
+				font-size: 3vw;
+				flex-direction: column;
+			}
+
+			a {
+				width: 30px;
+				height: 30px;
+				margin-right: 10px;
+
+				@include sp {
+					width: 7vw;
+					height: 7vw;
+					margin-bottom: 1vw;
+					margin-right: 0;
+				}
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+	.right__action {
+		margin-left: auto;
+		display: flex;
+		align-items: flex-end;
+		cursor: pointer;
+		
+		@include sp {
+			align-items: center;
+		}
+
+		.avatar {
+			width: 30px;
+			height: 30px;
+			position: relative;
+			border-radius: 50%;
+			overflow: hidden;
+
+			@include sp {
+				width: 8vw;
+    			height: 8vw;
+				border: 1px solid lightgray;
+				margin-right: 2vw;
+			}
+
+			img {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.name {
+			text-align: right;
+			font-size: 12px;
+			font-family: $hiragino;
+			margin-top: 10px;
+
+			@include sp {
+				margin-top: 0;
+				font-size: 3vw;
+			}
+		}
+	}
+}
+
+.movie__price {
+	height: 56px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $text-color;
+	color: $white-color !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	font-family: din-regular, sans-serif;
+
+	@include sp {
+		height: 14vw;
+		font-size: 5vw;
+	}
+
+	span {
+		font-size: 18px;
+
+		@include sp {
+			font-size: 4vw;
+		}
+	}
+}
+
+.comment__list {
+	width: 1170px;
+	margin: 45px auto 0;
+
+	@include sp {
+		width: 100%;
+		margin: 6vw auto 0;
+	}
+
+	.comment__list_inner {
+		border: 1px solid $pink-color;
+		border-top: 8px solid $pink-color;
+		padding: 20px 40px;
+
+		@include sp {
+			border-top: 1vw solid $pink-color;
+			padding: 4vw;
+		}
+		
+		.comment__item {
+			margin-bottom: 35px;
+
+			@include sp {
+				margin-bottom: 4vw;
+
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+			}
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			&:nth-of-type(3) ~ .comment__item {
+				display: none;
+			}
+
+			.comment_body {
+				display: flex;
+				align-items: flex-start;
+
+				.icon {
+					width: 25px;
+					height: 25px;
+					margin-right: 15px;
+					img {
+						width: 100%;
+					}
+
+					@include sp {
+						width: 6vw;
+						height: 6vw;
+						margin-left: 2vw;
+					}
+				}
+
+				.content {
+					flex: 1;
+					font-size: 14px;
+					font-family: $hiragino_maru;
+					line-height: 2;
+					font-weight: 400;
+
+					@include sp {
+						position: relative;
+						top: -1vw;
+						font-size: 3vw;
+					}
+				}
+			}
+
+			.date {
+				font-size: 14px;
+				color: $pink-color;
+				font-family: $hiragino_maru;
+				margin-top: 8px;
+				text-align: right;
+				padding-right: 30px;
+
+				@include sp {
+					font-size: 3vw;
+					margin-top: 1vw;
+					padding-right: 4vw;
+				}
+			}
+		}
+
+		&.dropped {
+			.comment__item {
+				display: block !important;
+			}
+		}
+	}
+
+	.comment__list_toggle {
+		height: 42px;
+		background-color: #ff7db8;
+		color: $white-color !important;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: underline !important;
+
+		@include sp {
+			height: 8vw;
+		}
+	}
+}
+
+.alert {
+	@include sp {
+		width: 100% !important;
+	}
+}

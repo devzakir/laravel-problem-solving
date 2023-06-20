@@ -1,0 +1,224 @@
+.auth__container {
+	padding: 0 0 100px;
+}
+
+.login__form {
+	width: 650px;
+	border-radius: 6px;
+	background-color: $back-color2;
+	padding: 32px 126px 50px 126px;
+	margin: 0 auto;
+	box-shadow: 0px 0px 3px 1px #c3c3c3;
+
+	@include sp {
+		width: 100%;
+		border-radius: 2vw;
+		padding: 6vw 12vw 10vw 12vw;
+	}
+	
+	h2 {
+		font-size: 22px;
+		font-weight: 600;
+		letter-spacing: 2px;
+		font-family: $hiragino, sans-serif;
+		text-align: center;
+
+		@include sp {
+			font-size: 4vw;
+		}
+
+		span {
+			font-family: din-regular, sans-serif;
+			font-size: 26px;
+			margin-right: 10px;
+
+			@include sp {
+				font-size: 4.2vw;
+				margin-right: 1vw;
+			}
+		}
+	}
+
+	.form__cont {
+		padding-top: 30px;
+
+		@include sp {
+			padding-top: 5vw;
+		}
+		
+		.form_row {
+			width: 100%;
+			margin-bottom: 30px;
+
+			@include sp {
+				margin-bottom: 2vw;
+			}
+
+			&.last {
+				margin-bottom: 0;
+			}
+
+			label {
+				font-size: 14px;
+				margin-bottom: 5px;
+				font-weight: 600;
+				font-family: $hiragino;
+
+				@include sp {
+					font-size: 3vw;
+					margin-bottom: 2vw;
+				}
+			}
+
+			p {
+				input {
+					width: 100%;
+					height: 40px;
+					border: 1px solid $border-color;
+					border-radius: 6px;
+					background-color: $white-color;
+					padding-left: 15px;
+					font-size: 14px;
+
+					@include sp {
+						height: 8vw;
+						padding-left: 2vw;
+						font-size: 2.5vw;
+						border-radius: 1vw;
+					}
+
+					&::placeholder {
+						color: $disable-color;
+					}
+
+					&.is-invalid {
+						border: 1px solid $invalid-color;
+						color: $invalid-color;
+					}
+				}
+			}
+
+			.invalid-note {
+				padding-top: 4px;
+
+				@include sp {
+					padding-top: 1vw;
+				}
+
+				p {
+					font-size: 10px;
+					color: $invalid-color;
+					margin-bottom: 4px;
+					line-height: 1.2;
+
+					@include sp {
+						font-size: 2vw;
+						margin-bottom: 1vw;
+					}
+				}
+			}
+		}
+
+		.form_check {
+			margin-top: 15px;
+			font-size: 14px;
+			font-family: $hiragino;
+
+			@include sp {
+				margin-top: 2vw;
+				font-size: 2.5vw;
+			}
+		}
+
+		.form__action {
+			padding-top: 45px;
+			display: flex;
+			justify-content: center;
+
+			@include sp {
+				padding-top: 6vw;
+			}
+
+			button {
+				width: 270px;
+				height: 40px;
+				border-radius: 6px;
+				border: 1px solid #ce9c4b;
+				display: inline-block;
+				background: linear-gradient(90deg, rgba(253,229,160,1) 0%, rgba(252,220,128,1) 46%, rgba(255,192,30,1) 100%);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 16px;
+				font-weight: 600;
+				transition: all ease-in-out .1s;
+				color: $text-color !important;
+				font-family: sans-serif;
+
+				@include sp {
+					width: 40vw;
+					height: 8vw;
+					border-radius: 1vw;
+					font-size: 3vw;
+				}
+
+				&:hover {
+					background: #ce9c4b;
+					color: $white-color !important;
+					transition: all ease-in-out .1s;
+					text-decoration: none !important;
+				}
+			}
+		}
+
+		.other_link {
+			padding-top: 10px;
+			text-align: center;
+
+			@include sp {
+				padding-top: 2vw;
+			}
+			a {
+				font-size: 14px;
+				color: $pink-color;
+				text-decoration: underline !important;
+				font-family: $hiragino_maru;
+
+				@include sp {
+					font-size: 2.5vw;
+				}
+			}
+		}
+	}
+}
+
+.md-checkbox .md-checkbox-container {
+	@include sp {
+		width: 4vw !important;
+		min-width: 4vw !important;
+		height: 4vw !important;
+	}
+}
+
+.md-checkbox .md-checkbox-label {
+	@include sp {
+		height: 4vw !important;
+		line-height: 4vw !important;
+		padding-left: 2vw !important;
+	}
+}
+
+.md-checkbox .md-checkbox-container:before {
+	@include sp {
+		width: 4vw !important;
+		height: 4vw !important;
+	}
+}
+
+.md-checkbox .md-checkbox-container:after {
+	@include sp {
+		width: 1.5vw;
+		height: 2vw;
+		left: 0.8vw;
+	}
+}
